@@ -341,12 +341,14 @@ footer p{
     text-align: center;
     color: #6F6F6F;
 }
-
+header .fa-bars{
+    display: none;
+}
 /* Início Resposividade */
 
 @media(max-width: 1200px){
     .container{
-        width: 90%;
+        width: 95%;
     }
 
     .header .container img{
@@ -389,5 +391,52 @@ footer p{
     }
     .content{
         margin-top: 10px;
+    }
+
+    .card img{
+        margin-top: 2.5em;
+        margin-left: 1em;
+    }
+    .resultado p{
+        margin-top: 0.5em;
+    }
+}
+
+/* Mobile */
+@media(max-width: 460px){
+    header .fa-bars{
+    color: var(--purple);
+    font-size: 3em;
+    display: block;
+    }
+
+    header .container div{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+    }
+
+    header .container div a{
+        margin-left: 7em;
+    }
+
+    #menu{
+    position: absolute;
+    top: 5.5em;
+    left: 0;
+    width: 100%;
+    background-color: var(--purple);
+    }
+
+    #menu ul{
+        flex-direction: column;
+        height: 300px;
+        margin-left: 1em;
+    }
+
+    #menu a{
+        display: block;
+        padding: 0.5em 0;
     }
 }
