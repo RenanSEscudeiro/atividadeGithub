@@ -1,16 +1,27 @@
-:root {
+:root{
     --background: #1E1C21;
     --pink: #FC1E8B;
     --purple: #7278C3;
     --blue: #00A8DC;
 }
 
-* {
+*{
     margin: 0;
     padding: 0;
 }
 
-.gradient {
+body{
+    background-color: var(--background);
+    font-family: 'Titillium Web', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+    color: white;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.gradient{
     background: rgba(252,30,137,1);
     background: -moz-linear-gradient(left, rgba(252,30,137,1) 0%, rgba(114,119,195,1) 100%);
     background: -webkit-gradient(left top, right top, color-stop(0%, rgba(252,30,137,1)), color-stop(100%, rgba(114,119,195,1)));
@@ -21,55 +32,41 @@
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fc1e89', endColorstr='#7277c3', GradientType=1 );
 }
 
-body {
-    font-family: 'Titillium Web', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
-    background-color: var(--background);
-    color: white;
-}
-
-a {
-    text-decoration: none;
-    color: white;
-}
-
-.container {
+.container{
     width: 80%;
     max-width: 1200px;
-    margin: auto; 
-    flex-flow: wrap;
+    margin: 0 auto;
 }
 
-header .container {
+
+header .container{
     display: flex;
     justify-content: space-between;
     padding: 20px 0;
-    flex-flow: wrap;
 }
 
-header ul {
+header ul{
     display: flex;
-    list-style: none;
+    list-style-type: none;
     justify-content: space-between;
-    text-transform: uppercase;
     flex-flow: wrap;
 }
 
-header a.text:hover {
-    color: #aaa;
-    text-decoration: underline;
-}
-
-header nav {
+header nav{
     width: 60%;
-    flex-flow: wrap;
 }
 
-header img {
-    margin-right: 100px;
-    flex-flow: wrap;
+header a{
+    text-transform: uppercase;
 }
+
+header img{
+    margin-right: 100px;
+}
+
 
 .partidas{
+    text-align: center;
     width: 100%;
     min-height: 100px;
     background: rgba(66,44,90,1);
@@ -79,55 +76,51 @@ header img {
     background: -o-linear-gradient(top, rgba(66,44,90,1) 0%, rgba(16,15,17,1) 100%);
     background: -ms-linear-gradient(top, rgba(66,44,90,1) 0%, rgba(16,15,17,1) 100%);
     background: linear-gradient(to bottom, rgba(66,44,90,1) 0%, rgba(16,15,17,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#422c5a', endColorstr='#100f11', GradientType=0 );  
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#422c5a', endColorstr='#100f11', GradientType=0 );
+}
+
+.partidas .container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     flex-flow: wrap;
-}	
-
-.fa-search {
-    padding: 0;
 }
 
-.fa-search:hover {
-    color: var(--pink);
-}
-
-.partidas .container {
+.proximas_partidas{
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
-    flex-flow: wrap;
+    align-items: flex-end;   
 }
 
-.partida img {
+.partida{
+    padding: 0 0 10px 0;
+}
+
+.partida img{
     width: 40px;
     padding: 0 10px;
 }
 
-.partida h2 {
+.partida h2{
     font-size: 14px;
-    flex-flow: wrap;
+    text-align: start;
     padding: 10px 0;
 }
 
-.partida div {
+.partida div{
     display: flex;
     align-items: center;
-    flex-flow: wrap;
     padding: 10px 0;
 }
 
-.red {
+.red{
     color: red;
 }
 
-.partida {
-    padding: 0 0 10px 0;
-}
-
-.banner {
+.banner{
     width: 100%;
     height: 400px;
-    background-image: url("../images/meta_mundo.jpg");
+    background-image: url("../img/meta_mundo.jpg");
     background-position: center;
     background-size: cover;
     display: flex;
@@ -135,31 +128,32 @@ header img {
     align-items: center;
 }
 
-.ligas {
+.ligas{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 30px 0;
 }
 
-.ligas img {
-    height: 140px;
+.ligas img{
+    height: 120px;
 }
 
-.ligas h4 {
+.ligas h4{
     font-size: 45px;
     text-transform: uppercase;
 }
 
-.ligas h3 {
+.ligas h3{
     font-size: 90px;
     text-transform: uppercase;
     line-height: 40px;
 }
 
 .ligas div{
-    margin-bottom:  35px;
+    margin-bottom: 35px;
 }
+
 
 .sobre_fundo{
     background-image: url("../img/Teams/T6.jpg");
@@ -168,12 +162,8 @@ header img {
     background-attachment: fixed;
     width: 100%;
     min-height: 500px;
-    clip-path: polygon(a 10%, 100% 0%, 100% 90%, 0% 100%);
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);  
 }
-
 .sobre_fundo_filtro{
     display: flex;
     justify-content: flex-end;
@@ -182,30 +172,28 @@ header img {
     height: 100%;
     background-color: rgba(114, 120, 195, 0.5);
 }
-
 .sobre{
     position: relative;
     display: flex;
 }
-
 .sobre img{
     position: absolute;
-    z z-index: 99;
+    z-index: 99;
     top: -20px;
+    left: 100px;
     width: 100%;
-    max-width: 35%;
+    max-width: 50%;  
 }
-
 .texto_sobre{
     width: 40%;
-    margin-right: 300px;
+    margin-right: 120px;
     text-align: right;
     text-shadow: 0px 3px 3px #000;
 }
-
 .texto_sobre h2{
-    margin-bottom: 20px;
+    margin-bottom: 2em;
 }
+
 
 .content{
     display: flex;
@@ -214,12 +202,9 @@ header img {
 }
 
 .content section{
-    width: 60%;
+    width: 70%;
 }
 
-.content article div{
-    box-shadow: 0px 3px 10px #000
-}
 
 .card{
     width: 100%;
@@ -227,32 +212,38 @@ header img {
     box-shadow: 0px 3px 10px #000;
     display: flex;
     justify-content: flex-start;
-    background: black;
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(30,28,33,1) 30%, rgba(30,28,33,1) 100%);
 }
 
 .card img{
     width: 220px;
     height: 220px;
+    object-fit: cover;
 }
 
 .card div{
     padding: 2em;
 }
 
-.card:hover{
-    color: var(--background);
-    background-color: var(--pink);
+.card div:hover{
+    background-color: #422c5a;
     transition-duration: 0.5s;
     transition-timing-function: ease-in-out;
 }
 
-content h3{
+.content h3{
     text-transform: uppercase;
-    padding: 2em 0px;
+    padding: 1em 0;
     font-size: 1.8em;
+
 }
 
-.resultado_box{
+.content article{
+    width: 25%;
+}
+
+.resultados_box{
     padding: 2em;
     box-shadow: 0px 3px 10px #000;
 }
@@ -272,70 +263,66 @@ content h3{
     width: 30px;
 }
 
-.reusltado p{
-    font-size: 2em;
-    margin: 1.2em 0;
+.resultado p{
+    font-size: 1.7em;
+    margin: 0.1em 0;
 }
 
 footer{
     background-color: black;
     box-shadow: 0px -6px 10px #000;
-    background: rgb (0,0,0);
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(30,28,33,1) 30%, rgba(30,28,33,1) 100%);
     min-height: 250px;
     padding: 2em 0;
 }
-
-footer.container{
+footer .container{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
 footer nav h3{
-    font-size: 1.4em;
+    font-size: 1.6em;
     color: #646464;
     margin-bottom: 1em;
 }
-
 footer nav ul{
     list-style-type: none;
 }
-
 footer nav li{
-    margin-bottom: 0.4em;
+   margin-bottom: 0.4em;
 }
-
 footer nav a:hover{
     border-bottom: solid 1px var(--purple);
 }
-/* Icones rápidos */
+
+/* Icones rodape */
+
 .sociais{
     display: flex;
     justify-content: space-between;
     font-size: 3em;
     margin-top: 0.5em;
+    
 }
 
 .sociais i{
-    
-        background: linear-gradient(to top, rgba(252,30,137,1) 0%, rgba(114,119,195,1) 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent; 
+    background: linear-gradient(to bottom, rgba(252,30,137,1) 0%, rgba(114,119,195,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
 }
 
-/* Inicio connfiguração form do rodapé */
+/* Inicia configuração form do rodapé */
 footer form{
     display: flex;
     flex-direction: column;
 }
-
 footer form label{
     font-size: 2em;
     font-weight: bold;
     color: #646464;
     margin-bottom: 0.3em;
 }
-
 footer form input{
     height: 2em;
     width: 15em;
@@ -343,93 +330,64 @@ footer form input{
     outline: none;
     padding: 1px;
 }
-
 .btn{
-    color: white;
-    border: none;
+    color:white;
+    border:none;
     text-decoration: none;
-    padding: 0.58em 2em;
+    padding: 0.65em 2em;
     cursor: pointer;
 }
-
 footer p{
     text-align: center;
     color: #6F6F6F;
 }
 
-.banner_cadastro{
-    width: 100%;
-    height: 273px;
-    background-image: url(../Images/banner.png);
-    display: flex;
-    align-items: center;
-    background-size: cover;
-    background-position: bottom;
+/* Início Resposividade */
+
+@media(max-width: 1200px){
+    .container{
+        width: 90%;
+    }
+
+    .header .container img{
+        max-width: 180px ;
+    }
+
+    .partidas .container{
+        flex-flow: nowrap;
+    }
+
+    .em_andamento{
+        width: 30%;
+    }
+
+    .proximas_partidas{
+        width: 70%;
+        flex-flow: wrap;
+        justify-content: space-around;
+    }
+    .ligas h4{
+        font-size: 30px;
+    }
+    .ligas h3{
+        font-size: 60px;
+    }
+    .ligas img{
+        height: 90px;
+    }
+
+    .sobre img{
+        max-width: 50%;
+        left: 10px;
+        margin-top: 40px;
+    }
+
+    .texto_sobre{
+        width: 50%;
+        right: 50px;
+        margin-right: 60px;
+    }
+    .content{
+        margin-top: 10px;
+    }
 }
-
-.banner_cadastro h1{
-    font-size: 3em;
-    text-transform: uppercase;
-}
-/* Formulário */
-
-.form_cadastro{
-    width: 100%;
-    max-width: 400px;
-    margin: 10em auto;
-    box-shadow: 4px 4px 20px #000000, -3px -6px 10px #7278C3;
-    padding: 1.5em;
-    border-radius: 5px;
-    
-}
-
-.campo{
-    display: flex;
-    margin-bottom: 0.5em;
-    justify-content: space-between;
-}
-
-.campo label{
-    text-transform: uppercase;
-}
-
-input[type="text"],
-input[type="password"],
-.campo input[type="email"],
-input[type="date"]
-select{
-    width: 50%;
-    border: none;
-    background-color: #1e1c21;
-    outline: none;
-    border-bottom: solid 1px #7278C3;
-    color: #ccc;
-}
-
-.campo input:focus{
-    background-color: #2f2f2f;
-}
-
-.campo fieldset{
-    border: none;
-}
-
-.campo fieldset label{
-    margin: 2em 1em 2em 0;
-}
-
-.termos{
-    justify-content: unset;
-    align-items: center;
-}
-
-.termos input{
-    margin-right: 0.5em;
-}
-
-.form_cadastro .campo:nth-child(10){
-    margin: auto;
-    
-}
-
-
